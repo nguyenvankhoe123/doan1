@@ -1,0 +1,114 @@
+﻿@model WebOnline.Models.ProductModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ProductModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TenSanPham)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TenSanPham)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MaLoaiSP)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MaLoaiSP)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MaKhoiLuong)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MaKhoiLuong)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MaNhaSanXuat)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MaNhaSanXuat)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DonViTinh)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DonViTinh)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SoLuong)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SoLuongBan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SoLuongBan)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DonGia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MoTa)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NgayCapNhat)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NgayCapNhat)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.HinhMinhHoa)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HinhMinhHoa)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaSanPham }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

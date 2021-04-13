@@ -1,0 +1,26 @@
+﻿@model WebOnline.Models.KhoiLuongSP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhoiLuongSP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKhoiLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhoiLuong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKhoiLuong }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

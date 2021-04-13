@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebOnline", "WebOnline\WebOnline.csproj", "{10E273D9-92D3-45C6-9534-46ED8FBFD034}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10E273D9-92D3-45C6-9534-46ED8FBFD034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E273D9-92D3-45C6-9534-46ED8FBFD034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E273D9-92D3-45C6-9534-46ED8FBFD034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E273D9-92D3-45C6-9534-46ED8FBFD034}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5293972C-B77B-4F66-A0AA-DABCA141F165}
+	EndGlobalSection
+EndGlobal

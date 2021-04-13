@@ -1,0 +1,123 @@
+﻿@*@model WebOnline.Models.KhachHang
+
+    @{
+        ViewBag.Title = "Create";
+    }
+
+    <h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>USER</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.TenDangNhap, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TenDangNhap, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TenDangNhap, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MatKhau, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DienThoaiKhach, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DienThoaiKhach, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DienThoaiKhach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                    @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Avatar, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@model WebOnline.Models.KhachHang
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="center">
+        <!-- login -->
+        <div class="w3_login">
+            <h3>Sign In & Sign Up</h3>
+            <div class="w3_login_module">
+                <div class="module form-module">
+                    <div class="toggle">
+                        <i class="fa fa-times fa-pencil"></i>
+                        <div class="tooltip">Sign up</div>
+                    </div>
+                    @*<div class="form">
+                        <h2>Login to your account</h2>
+                        <form action="#" method="post">
+                            <input type="text" name="Username" placeholder="Username" required>
+                            <input type="password" name="Password" placeholder="Password" requireds>
+                            <input type="submit" value="Login">
+                        </form>
+                    </div>*@
+                    <div class="form">
+                        <h2>Create an account</h2>
+                        <form action="#" method="post">
+                            <input type="text" name="TenDangNhap" placeholder="Username" required>
+                            <input type="password" name="MatKhau" placeholder="Password" required>
+                            <input type="email" name="Email" placeholder="Email Address" required>
+                            <input type="text" name="DienThoaiKhach" placeholder="Phone Number" required>
+                            <input type="submit" value="Register">
+                        </form>
+                    </div>
+                    <div class="cta"><a href="#">Forgot your password?</a></div>
+                </div>
+            </div>
+            <script>
+                    $('.toggle').click(function () {
+                        // Switches the Icon
+                        $(this).children('i').toggleClass('fa-pencil');
+                        // Switches the forms
+                        $('.form').animate({
+                            height: "toggle",
+                            'padding-top': 'toggle',
+                            'padding-bottom': 'toggle',
+                            opacity: "toggle"
+                        }, "slow");
+                    });
+            </script>
+        </div>
+        <!-- //login -->
+    </div>
+    <div class="clearfix"></div>
+</body>
+</html>
+

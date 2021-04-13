@@ -1,0 +1,42 @@
+﻿@model WebOnline.Models.NhaSanXuat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhaSanXuat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNhaSanXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNhaSanXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChiNhaSanXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChiNhaSanXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DienThoaiNhaSanXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoaiNhaSanXuat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaNhaSanXuat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

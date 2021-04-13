@@ -1,0 +1,100 @@
+﻿@{
+        ViewBag.Title = "Login";
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Đăng nhập hệ thống</title>
+        <link href="~/Areas/Administrator/Content/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="~/Areas/Administrator/Content/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="~/Areas/Administrator/Content/vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="~/Areas/Administrator/Content/vendors/animate.css/animate.min.css" rel="stylesheet">
+        <link href="~/Areas/Administrator/Content/build/css/custom.min.css" rel="stylesheet">
+    </head>
+
+    <body class="login">
+        <div>
+            <a class="hiddenanchor" id="signup"></a>
+            <a class="hiddenanchor" id="signin"></a>
+
+            <div class="login_wrapper">
+                <div class="animate form login_form">
+                    <section class="login_content">
+                        <form action="/Administrator/Home/Login" method="post">
+                            <h1>Login Admin</h1>
+                            <div>
+                                <input type="text" name="username" class="form-control" placeholder="Username" required="" />
+                            </div>
+                            <div>
+                                <input type="password" name="password" class="form-control" placeholder="Password" required="" />
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary"> Login</button>
+                                <br />
+                                <a class="center" href="#">Forgot password?</a>
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                            <div class="separator">
+                                <p class="change-link">
+                                    <a href="#singup" class="to-register">Create a new account</a>
+                                </p>
+                            </div>
+                        </form>
+                    </section>
+                    @ViewBag.error
+                </div>
+
+            </div>
+        </div>
+    </body>
+    </html>
+
+
+
+@*@model WebOnline.Models.LoginModel
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+
+                <div class="header">
+                    <p class="lead">Login Governance</p>
+                </div>
+                <div class="body">
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "form-auth-small" }))
+                    {
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.returnUrl);
+                        <div class="form-group">
+                            <label for="signin-email" class="control-label sr-only">User Name</label>
+                            @Html.TextBoxFor(model => model.userName, new { @class = "form-control", @placeholder = "Tên đăng nhập", @autofocus = "autofocus" })
+                            @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password" class="control-label sr-only">Password</label>
+                            @Html.PasswordFor(model => model.passWord, new { @class = "form-control", @placeholder = "Password" })
+                            @Html.ValidationMessageFor(model => model.passWord, "", new { @class = "text-danger" })
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block item-menu">LOGIN</button>
+                    }
+                </div>
+            </section>
+        </div>
+    </div>
+</div>*@
+
+
+
+
